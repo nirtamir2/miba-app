@@ -14,9 +14,11 @@
         </v-list-tile>
       </template>
     </v-list>
+    <h1>{{a}}</h1>
   </div>
 </template>
 <script>
+  import {db} from '../firebase'
   export default {
     data () {
       return {
@@ -41,7 +43,13 @@
           }
         ]
       }
+    },
+  firebase()
+  {
+    return{
+      a: db.ref('/')
     }
+  }
   }
 </script>
 
